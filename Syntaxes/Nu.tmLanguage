@@ -738,22 +738,60 @@
 			<string>meta.nukefile.default.task.nu</string>
 		</dict>
 		<dict>
+		  <key>captures</key>
+		  <dict>
+		    <key>1</key>
+		    <dict>
+		      <key>name</key>
+  		    <string>keyword.control.nu</string>
+	      </dict>
+	    </dict>
 			<key>match</key>
-			<string>\b(let|set|cond|case|do|loop|until|while|for|break|continue|if|else|elseif|then|unless|try|throw|catch|array|dict|list|return)\b</string>
+			<string>\((let|set|cond|case|do|loop|until|while|for|break|continue|if|else|elseif|then|unless|try|throw|catch|array|dict|list|return)\b</string>
 			<key>name</key>
-			<string>keyword.control.nu</string>
+			<string>meta.keyword.control.nu</string>
 		</dict>
 		<dict>
+		  <key>captures</key>
+		  <dict>
+		    <key>1</key>
+		    <dict>
+		      <key>name</key>
+  		    <string>keyword.operator.comparison.nu</string>
+	      </dict>
+	    </dict>
 			<key>match</key>
-			<string>\b(eq|neq|and|or|synchronized|not)\b</string>
+			<string>\((eq|==|ne|!=|gt|&gt;|lt|&lt;|ge|&gt;=|le|&lt;=)\b</string>
 			<key>name</key>
-			<string>keyword.operator.nu</string>
+			<string>meta.keyword.operator.comparison.nu</string>
 		</dict>
 		<dict>
+		  <key>captures</key>
+		  <dict>
+		    <key>1</key>
+		    <dict>
+		      <key>name</key>
+  		    <string>keyword.operator.logic.nu</string>
+	      </dict>
+	    </dict>
 			<key>match</key>
-			<string>[/*+-/&amp;|&gt;&lt;=!`@]</string>
+			<string>\((and|or|not)\b</string>
 			<key>name</key>
-			<string>keyword.operator.symbolic.nu</string>
+			<string>meta.keyword.operator.logic.nu</string>
+		</dict>
+		<dict>
+		  <key>captures</key>
+		  <dict>
+		    <key>1</key>
+		    <dict>
+		      <key>name</key>
+  		    <string>keyword.operator.math.nu</string>
+	      </dict>
+	    </dict>
+			<key>match</key>
+			<string>\((\/|\*|\+|\-|&amp;|\|)\s+</string>
+			<key>name</key>
+			<string>meta.keyword.operator.math.nu</string>
 		</dict>
 		<dict>
 			<key>match</key>
