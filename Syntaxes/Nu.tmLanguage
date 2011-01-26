@@ -621,7 +621,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(function|macro|macro-0|macro-1)\s+((\w|\-|\!|\?)*)</string>
+			<string>\((function|macro|macro-0|macro-1)\s+((\w|\-|\!|\?)*)</string>
 			<key>name</key>
 			<string>meta.function.nu</string>
 		</dict>
