@@ -1186,10 +1186,6 @@
 					<string>support.function.nuke.nu</string>
 				</dict>
 			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array/>
 		</dict>
 		<dict>
 			<key>name</key>
