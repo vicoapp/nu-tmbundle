@@ -1001,6 +1001,33 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>meta.expression.quasiquote.nu</string>
+			<key>begin</key>
+			<string>(\`)\(</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.quasiquote.nu</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#quasiquote-form</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>meta.expression.nu</string>
 			<key>begin</key>
 			<string>\(\s*(synchronized)\s+</string>
@@ -1361,29 +1388,16 @@
 				<dict>
 					<key>name</key>
 					<string>meta.expression.quasiquote-eval.nu</string>
-					<key>begin</key>
-					<string>\(\s*(quasiquote-eval)\s+</string>
-					<key>beginCaptures</key>
+					<key>match</key>
+					<string>(?&lt;=\A|\s|\(|:)(\,)\w+(?=\Z|\s|\))</string>
+					<key>captures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.quasiquote.nu</string>
+							<string>punctuation.definition.quasiquote-eval.nu</string>
 						</dict>
 					</dict>
-					<key>end</key>
-					<string>\)</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#quasiquote-form</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
 				</dict>
 				<dict>
 					<key>name</key>
@@ -1414,9 +1428,9 @@
 				</dict>
 				<dict>
 					<key>name</key>
-					<string>meta.expression.quasiquote-splice.nu</string>
+					<string>meta.expression.quasiquote-eval.nu</string>
 					<key>begin</key>
-					<string>\(\s*(quasiquote-splice)\s+</string>
+					<string>\(\s*(quasiquote-eval)\s+</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -1450,6 +1464,33 @@
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.quasiquote-splice.nu</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\)</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#quasiquote-form</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>meta.expression.quasiquote-splice.nu</string>
+					<key>begin</key>
+					<string>\(\s*(quasiquote-splice)\s+</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.other.quasiquote.nu</string>
 						</dict>
 					</dict>
 					<key>end</key>
