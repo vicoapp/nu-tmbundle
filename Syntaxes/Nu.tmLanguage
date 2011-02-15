@@ -246,7 +246,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.nu</string>
+					<string>support.operator.nu</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -390,7 +390,7 @@
 				</dict>
 				<dict>
 					<key>name</key>
-					<string>meta.method.nu</string>
+					<string>meta.function.nu</string>
 					<key>begin</key>
 					<string>\((?=(imethod|cmethod|\-|\+).*is)</string>
 					<key>end</key>
@@ -407,6 +407,11 @@
 									<key>name</key>
 									<string>keyword.other.nu</string>
 								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>meta.return-type.nu</string>
+								</dict>
 								<key>3</key>
 								<dict>
 									<key>name</key>
@@ -414,7 +419,7 @@
 								</dict>
 							</dict>
 							<key>end</key>
-							<string>(is)</string>
+							<string>(is)(?=\Z|\s|\))</string>
 							<key>endCaptures</key>
 							<dict>
 								<key>1</key>
@@ -548,53 +553,7 @@
 			<key>name</key>
 			<string>meta.expression.nu</string>
 			<key>begin</key>
-			<string>\(\s*(send|call|quote|eval|parse|context)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.evaluation.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(while|until|for|break|continue)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.control.loop.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(cond|case|if|else|then|unless|progn|return|return-from)\s+</string>
+			<string>\(\s*(send|call|eval|parse|context|while|until|for|break|continue|cond|case|if|else|then|unless|progn|return|return-from)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -663,105 +622,13 @@
 			<key>name</key>
 			<string>meta.expression.nu</string>
 			<key>begin</key>
-			<string>\(\s*(\&amp;|\|)\s+</string>
+			<string>\(\s*(\&amp;|\|and|or|not|\&gt;|\&lt;|\&gt;=|\&lt;=|==|\!=|eq|ne|gt|lt|ge|le|\&lt;\&lt;|\&gt;\&gt;|\*|\/|\%|\+|\-|\*\*|synchronized|throw\*?|array|dict|list|regex|uname|system|gets|puts|print|beep|random|srandom|sleep|exit|help|\?|let|macrox)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.operator.logical.bitwise.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(and|or|not)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.logical.boolean.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(\&gt;|\&lt;|\&gt;=|\&lt;=|==|\!=|eq|ne|gt|lt|ge|le)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.comparison.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(\&lt;\&lt;|\&gt;\&gt;)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.math.bitwise.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(\*|\/|\%|\+|\-|\*\*)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.math.numeric.nu</string>
+					<string>support.operator.nu</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -784,7 +651,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.assignment.nu</string>
+					<string>support.operator.assignment.nu</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -796,59 +663,6 @@
 			<string>\)</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.let.nu</string>
-			<key>begin</key>
-			<string>\((?=(let)\s+)</string>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>(let)\s+\(</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.assignment.nu</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\)</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>begin</key>
-							<string>\(\s*(\w+)\s+</string>
-							<key>beginCaptures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>entity.name.variable.context.nu</string>
-								</dict>
-							</dict>
-							<key>end</key>
-							<string>\)</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>$self</string>
-								</dict>
-							</array>
-						</dict>
-					</array>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>$self</string>
@@ -946,34 +760,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(macrox)\s+(([\w-]+))?</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.function.other.nu</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>meta.expression.quasiquote.nu</string>
 			<key>begin</key>
 			<string>\(\s*(quasiquote)\s+</string>
@@ -1030,52 +816,6 @@
 			<key>name</key>
 			<string>meta.expression.nu</string>
 			<key>begin</key>
-			<string>\(\s*(synchronized)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.control.thread.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
-			<string>\(\s*(throw\*?)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.other.exception.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>meta.expression.nu</string>
-			<key>begin</key>
 			<string>\(\s*(try)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -1120,27 +860,6 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\(\s*(array|dict|list|regex)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.function.type.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
 			<string>\(\s*(load|import)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -1148,27 +867,6 @@
 				<dict>
 					<key>name</key>
 					<string>keyword.other.nu</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\(\s*(uname|system|gets|puts|print|beep|random|srandom|sleep|exit|help|\?)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.operator.system-call.nu</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -1294,7 +992,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.nuke.task.nu</string>
+					<string>entity.name.task.nuke.nu</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -1304,7 +1002,7 @@
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.nuke.task.nu</string>
+					<string>entity.name.dependant-task.nuke.nu</string>
 				</dict>
 			</dict>
 		</dict>
