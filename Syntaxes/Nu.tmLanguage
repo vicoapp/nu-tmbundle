@@ -942,7 +942,7 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.function.nuke.task.nu</string>
+							<string>entity.name.function.task.nuke.nu</string>
 						</dict>
 						<key>4</key>
 						<dict>
@@ -952,7 +952,7 @@
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.function.nuke.task.nu</string>
+							<string>entity.name.dependant-task.nuke.nu</string>
 						</dict>
 						<key>6</key>
 						<dict>
@@ -992,7 +992,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.task.nuke.nu</string>
+					<string>entity.name.function.task.nuke.nu</string>
 				</dict>
 				<key>3</key>
 				<dict>
