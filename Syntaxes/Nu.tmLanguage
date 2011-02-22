@@ -72,6 +72,8 @@
 			<string>constant.character.literal.nu</string>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>string.regexp.nu</string>
 			<key>begin</key>
 			<string>(/)(?=[^ ])</string>
 			<key>beginCaptures</key>
@@ -83,26 +85,15 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>/[isxlm]*</string>
+			<string>(/)([isxlm]*)</string>
 			<key>endCaptures</key>
 			<dict>
-				<key>0</key>
+				<key>1</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.definition.regex.end.nu</string>
 				</dict>
 			</dict>
-			<key>name</key>
-			<string>string.regexp.nu</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\/</string>
-					<key>name</key>
-					<string>constant.character.escape.nu</string>
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>name</key>
