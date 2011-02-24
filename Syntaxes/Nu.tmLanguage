@@ -613,7 +613,7 @@
 			<key>name</key>
 			<string>meta.expression.nu</string>
 			<key>begin</key>
-			<string>\(\s*(\&amp;|\|and|or|not|\&gt;|\&lt;|\&gt;=|\&lt;=|==|\!=|eq|ne|gt|lt|ge|le|\&lt;\&lt;|\&gt;\&gt;|\*|\/|\%|\+|\-|\*\*|synchronized|throw\*?|array|dict|list|regex|uname|system|gets|puts|print|beep|random|srandom|sleep|exit|help|\?|let|macrox)\s+</string>
+			<string>\(\s*(\&amp;|\|and|or|not|\&gt;|\&lt;|\&gt;=|\&lt;=|==|\!=|eq\??|ne\??|gt\??|lt\??|ge\??|le\??|\&lt;\&lt;|\&gt;\&gt;|\*|\/|\%|\+|\-|\*\*|synchronized|throw\*?|array|dict|list|regex|uname|system|gets|puts|print|beep|random|srandom|sleep|exit|help|\?|let|macrox)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
