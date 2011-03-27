@@ -383,7 +383,7 @@
 					<key>name</key>
 					<string>meta.function.nu</string>
 					<key>begin</key>
-					<string>\((?=(imethod|cmethod|\-|\+).*is)</string>
+					<string>\((?=(imethod|cmethod|\-|\+))</string>
 					<key>end</key>
 					<string>\)</string>
 					<key>patterns</key>
