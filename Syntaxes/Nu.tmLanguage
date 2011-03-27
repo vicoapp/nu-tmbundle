@@ -283,7 +283,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.symbol.quoted.nu</string>
+					<string>punctuation.definition.quoted-symbol.nu</string>
 				</dict>
 			</dict>
 		</dict>
