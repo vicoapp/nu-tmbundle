@@ -703,7 +703,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.function.nu</string>
+					<string>support.operator.function.nu</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -759,7 +759,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.nu</string>
+					<string>support.operator.nu</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -813,7 +813,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.exception.nu</string>
+					<string>support.operator.exception.nu</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -830,7 +830,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.exception.nu</string>
+							<string>support.operator.exception.nu</string>
 						</dict>
 					</dict>
 					<key>end</key>
@@ -1148,7 +1148,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.quasiquote.nu</string>
+							<string>support.operator.nu</string>
 						</dict>
 					</dict>
 					<key>end</key>
@@ -1202,7 +1202,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.quasiquote.nu</string>
+							<string>support.operator.nu</string>
 						</dict>
 					</dict>
 					<key>end</key>
