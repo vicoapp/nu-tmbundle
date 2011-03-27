@@ -277,7 +277,7 @@
 			<key>name</key>
 			<string>constant.other.symbol.nu</string>
 			<key>match</key>
-			<string>(?&lt;=\A|\s|\(|:)(\&apos;)\w+(?=\Z|\s|\))</string>
+			<string>(?&lt;=\A|\s|\(|:)(\&apos;)[\*\w-]+(?=\Z|\s|\))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
