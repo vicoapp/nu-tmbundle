@@ -3,7 +3,8 @@
 
 ; Overtype ')'
 ((ViMap insertMap) map:")" toExpression:(do ()
-	(if (eq ')' (text currentCharacter))
-		(text input:"<right>")
-		(else (text input:"<ctrl-v>)")))) scope:"source.nu")
+	(let (text (current-text))
+		(if (eq ')' (text currentCharacter))
+			(text input:"<right>")
+			(else (text input:"<ctrl-v>)")))) scope:"source.nu"))
 
