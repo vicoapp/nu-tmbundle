@@ -6,5 +6,5 @@
 	(let (text (current-text))
 		(if (eq ')' (text currentCharacter))
 			(text input:"<right>")
-			(else (text input:"<ctrl-v>)")))) scope:"source.nu"))
+			(else (text input:"<ctrl-v>)"))))) scope:"source.nu")
 
